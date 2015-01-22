@@ -1,0 +1,47 @@
+[core]
+    editor = vim -c \"set fenc=utf-8\"
+[color]
+    status      = auto
+    diff        = auto
+    branch      = auto
+    interactive = auto
+    grep        = auto
+[alias]
+    ad = add 
+    br = branch
+    ci = commit -v
+    e = commit --allow-empty
+    cia = commit --amend -v
+    cih = commit --amend -C HEAD
+    cih1 = commit --amend -c HEAD@{1}
+    co = checkout
+    d = diff
+    dc = diff --cached
+    dn = diff --name-only
+    dw = diff --color-words
+    ft = fetch
+    l = log --oneline -n 20
+    lgraph = log --oneline --graph --decorate --all -n 20
+    lp = log --oneline -n 20 -p
+    ls = log --stat -n 1
+    pl = pull
+    ps = push
+    rb = rebase
+    rbh = rebase HEAD
+    rbo = rebase --onto
+    rl = reflog show -n 20
+    rs = reset
+    rsh = reset --hard
+    sh = show
+    share = daemon --verbose --base-path=/home/sinsoku/repos/ --enable=receive-pack
+    so = remote show origin
+    s  = status -s
+    st = status -s
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    pr = pull-request
+    pu = !git push origin `git rev-parse --abbrev-ref HEAD`
+[push]
+    default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
