@@ -4,10 +4,10 @@ syntax enable
 filetype plugin indent on
 
 " タブスペースの設定
-set shiftwidth=4
-set ts=4
-set sw=4
-set tabstop=4
+set shiftwidth=2
+set ts=2
+set sw=2
+set tabstop=2
 set expandtab
 
 if &t_Co > 1
